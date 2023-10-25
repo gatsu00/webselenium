@@ -38,9 +38,9 @@ class AppOrderPositiveTest {
 
     @Test
     public void shouldBeSuccessfulForm() {
-        driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Петров Кирилл Сергеевич");
-        driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79853423467");
-        driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
+        driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Петров Денис Сергеевич");
+        driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79853423467");
+        driver.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         driver.findElement(By.cssSelector("button.button")).click();
         var actualText = driver.findElement(By.cssSelector("[data-test-id=order-success]")).getText().trim();
         assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", actualText);
